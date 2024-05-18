@@ -1,14 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using POS.Application.Commons.Bases.Request;
-using POS.Application.Dtos.Purchase.Request;
 using POS.Application.Dtos.Sale.Request;
 using POS.Application.Interfaces;
-using POS.Application.Services;
 using POS.Utilities.Static;
 
 namespace POS.Api.Controllers
 {
-    [Route("api/[controller]")]
+	[Authorize]
+	[Route("api/[controller]")]
     [ApiController]
     public class SaleController : ControllerBase
     {

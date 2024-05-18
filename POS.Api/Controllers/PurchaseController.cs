@@ -1,4 +1,5 @@
 ﻿using DocumentFormat.OpenXml.Spreadsheet;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using POS.Application.Commons.Bases.Request;
 using POS.Application.Dtos.Purchase.Request;
@@ -7,7 +8,8 @@ using POS.Utilities.Static;
 
 namespace POS.Api.Controllers
 {
-    [Route("api/[controller]")]
+	[Authorize]
+	[Route("api/[controller]")]
     [ApiController]
     public class PurchaseController : ControllerBase
     {
